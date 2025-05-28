@@ -6,7 +6,9 @@ Node.js versão 20.13.0
 ## Servidor de Desenvolvimento
 
 Faça um git pull do repositorio do git hub: 
-git clone <url-do-repositorio>
+git clone https://github.com/GiovanneBordotti/pokedex-angular.git](https://github.com/GiovanneBordotti/pokedex-angular.git
+)
+
 
 fazer um npm intall na raiz do projeto:
 npm install
