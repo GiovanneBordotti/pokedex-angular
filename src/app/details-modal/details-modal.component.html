@@ -1,0 +1,52 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{ modalInfos?.name | uppercase}}</h4>
+    <button (click)="closeModal()" type="button" class="btn-close" aria-label="Close"></button>
+</div>
+
+<div class="modal-body">
+    <div class="container text-center mb-4">
+        <div *ngIf="loading" class="text-center my-4">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Carregando...</span>
+            </div>
+        </div>
+
+        <img [src]="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${modalInfos?.id}.gif`"
+            class="card-img-top mx-auto d-block w-50" [alt]="modalInfos?.name || 'Pokemon Image'" (load)="loading = false">
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Atributos
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Altura: {{ modalInfos?.height }} dm </li>
+                <li class="list-group-item">Peso: {{ modalInfos?.weight }} hg</li>
+                <li class="list-group-item">Experiência Base: {{ modalInfos?.base_experience }}</li>
+            </ul>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-header">
+                Habilidades
+            </div>
+            <ul class="list-group list-group-flush">
+                <li *ngFor="let ability of modalInfos?.abilities" class="list-group-item">
+                    {{ ability.ability.name | capitalize}}
+                </li>
+            </ul>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-header">
+                Tipos
+            </div>
+            <ul class="list-group list-group-flush">
+                <li *ngFor="let type of modalInfos?.types" class="list-group-item">
+                    {{ type.type.name | capitalize}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

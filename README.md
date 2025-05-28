@@ -1,59 +1,43 @@
-# PokedexTest
+# Teste de desenvolvimento: Pokedex
+Este projeto foi desenvolvido utilizando:
+[Angular] versão 19.2.13
+Node.js versão 20.13.0
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+## Servidor de Desenvolvimento
 
-## Development server
+Faça um git pull do repositorio do git hub: 
+git clone <url-do-repositorio>
 
-To start a local development server, run:
+fazer um npm intall na raiz do projeto:
+npm install
 
-```bash
+Para iniciar o projeto localmente entrar no bash na raiz do projeto:
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Acesse o projeto pelo navegador:
+http://localhost:4200/
 
-## Code scaffolding
+## Proposta do projeto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Teste para testar e colocar conhecimentos do angular
+{
+    -Uso da biblioteca Bootstrap para estilização
 
-```bash
-ng generate component component-name
-```
+    -itegração com Api para consultas
+     
+    -Prática de injeção de dependência, diretivas, e componentização
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+    -Organização modular e reutilizável de componentes
+}
 
-```bash
-ng generate --help
-```
+Principais funcionalidades da pagina
+{
+    -Listagem de Pokémons consumindo dados da PokeAPI
 
-## Building
+    -Paginação para limitar a quantidade de elementos visíveis por tela
 
-To build the project run:
+    -Filtro dinâmico para busca por nome
 
-```bash
-ng build
-```
+    -Botão de detalhes para visualizar características adicionais do Pokémon selecionado 
+}
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

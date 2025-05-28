@@ -1,0 +1,58 @@
+.main{
+    background-color: #f7f5f5;
+}
+.pokedex-main-title {
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 2.5rem;
+    padding-left:20px;
+    padding-top:20px;
+}
+
+.header-container {
+  height: 65px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #E3350D 50%, #2A75BB 50%);
+  padding: 30px 15px 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.header-container .logo-topbar-img { 
+    height: 5.5rem;
+    max-height: 100%;
+    width: auto;
+}
+
+.main-content {
+    padding-top: 65px;
+}
+
+.title {
+    padding: 20px; 
+}
+
+.filter{
+    display: flex;
+    gap: 8px; 
+    align-items: center;
+    padding: 16px;     
+    border-radius: 16px; 
+    border: 1px solid;
+    border-color: #F5F5F5; 
+    align-items: baseline;
+    background-color: #f5f5f5; 
+    width: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card{
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    padding-left: 25px
+}

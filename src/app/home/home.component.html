@@ -1,0 +1,46 @@
+<div class="container ">
+  <div class="filter mb-4 justify-content-center mx-auto">
+    <img src="./assets/images/pngegg.png" alt="res" style="width: 30px; height: auto;">
+    <input type="text" class="form-control" placeholder="Digite o nome do Pokémon..." [(ngModel)]="filter.name"
+      (keyup)="filterName()" />
+  </div>
+
+  <div *ngIf="loading" class="text-center ">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Carregando...</span>
+    </div>
+  </div>
+
+  <div *ngIf="!loading"class="row">
+    <div *ngFor="let pokemon of this.pokemons" class="col-sm-6 col-md-4 col-lg-2 mb-4">
+      <div class="card h-100">
+        <img
+          [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + extractIdFromUrl(pokemon.url) + '.png'"
+          class="card-img-top" alt="{{ pokemon.name }}"/>
+        <div class="card-body d-flex flex-column align-items-center">
+          <h5 style="color: #333333" class="card-title text-capitalize">{{ pokemon.name }}</h5>
+          <button (click)="openModal(extractIdFromUrl(pokemon.url))" class=" botton btn btn-primary">Detalhes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!loading">
+    <nav *ngIf="filter.name === '' " aria-label="Page navigation example">
+      <ul class="pagination pb-4 m-0 justify-content-center">
+        <li class="page-item " [class.disable]="this.currentPage === 1">
+          <button class="page-link" (click)="pageChange( currentPage - 1 )">Anterior</button>
+        </li>
+        <li class="page-item " *ngFor="let page of this.pages; let i = index"
+          [class.active]="this.currentPage === i + 1">
+          <button class="page-link" (click)="pageChange(i + 1)">{{i + 1}}</button>
+        </li>
+        <li class="page-item " [class.disable]="this.currentPage === this.totalPages">
+          <button class="page-link" (click)="pageChange(currentPage + 1)">Proximo</button>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+
+</div>
